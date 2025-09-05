@@ -27,6 +27,10 @@ int main() {
     float pibPerCapita2;
     float superPoder2;
 
+    //Variaveis
+    int opcao;
+
+
     // Leitura dos dados da carta 1
     printf("Cadastro da Carta 1:\n");
     printf("Informe a inicial de seu Estado: ");
@@ -72,19 +76,18 @@ int main() {
     superPoder2 = (float)populacao2 + area2 + (pib2 * 1000000000.0f) + pibPerCapita2 + (1.0f / densidade2) + pontosTuristicos2;
 
     // Menu de comparação
-    int opcao;
-    do {
-        printf("\n---- MENU DE COMPARAÇÃO ----\n");
-        printf("1 - População\n");
-        printf("2 - Área\n");
-        printf("3 - PIB\n");
-        printf("4 - Pontos Turísticos\n");
-        printf("5 - Densidade Populacional\n");
-        printf("6 - PIB per Capita\n");
-        printf("7 - Super Poder\n");
-        printf("0 - Sair\n");
-        printf("Escolha uma opção: ");
-        scanf("%d", &opcao);
+
+    printf("\n---- MENU DE COMPARAÇÃO ----\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade Populacional\n");
+    printf("6 - PIB per Capita\n");
+    printf("7 - Super Poder\n");
+    printf("0 - Sair\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
 
         switch(opcao) {
             case 1:
@@ -164,7 +167,7 @@ int main() {
             default:
                 printf("Opção inválida! Tente novamente.\n");
         }
-    } while(opcao != 0);
+    
 
     return 0;
 }
